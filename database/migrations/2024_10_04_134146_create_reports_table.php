@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('historicals', function (Blueprint $table) {
+        Schema::create('reports', function (Blueprint $table) {
             $table->id();
-            $table->string('num_monthly');
-            $table->string('num_codes');
-            $table->string('dates');
-            $table->string('food_quantity');
-            $table->foreignId('results')->constrained();
+            $table->date('inicio_data');
+            $table->date('fim_data');
+            $table->string('observacao');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('historicals');
+        Schema::dropIfExists('reports');
     }
 };

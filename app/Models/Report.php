@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Inspector extends Model
+class Report extends Model
 {
-protected $fillable = ['nome', 'email', 'senha', 'funcao'];
+    protected $fillable = ['inicio_data', 'fim_data', 'observacao'];
 }

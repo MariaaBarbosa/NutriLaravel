@@ -11,6 +11,7 @@ class NutritionistController extends Controller
         $nutritionist = new Nutritionist();
         $nutritionist->name=$request->nome;
         $nutritionist->email = $request->email;
+        $nutritionist->function = $request->funcao;
         $nutritionist->password = $request ->senha;
         $nutritionist->save();
         return response()->json(['message' => 'Nutricionista cadastrado com sucesso!'], 201);
