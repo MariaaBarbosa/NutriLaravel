@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kitchen extends Model
 {
-    use HasFactory;
+    protected $fillable = ['data', 'cafe_da_manha_feito', 'cafe_da_manha_desperdicio', 'almoco_feito', 'almoco_desperdicio', 'cafe_da_tarde_feito', 'cafe_da_tarde_desperdicio'];
 }

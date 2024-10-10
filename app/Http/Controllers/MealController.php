@@ -6,60 +6,17 @@ use App\Models\Meal;
 use Illuminate\Http\Request;
 
 class MealController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+{ 
     public function store(Request $request)
     {
-        //
+        $meal = new Meal();
+        $meal->data=$request->data;
+        $meal->tipo = $request->tipo;
+        $meal->save();
+        return response()->json(['message' => 'Refeição cadastrada com sucesso!'], 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Meal $meal)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Meal $meal)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Meal $meal)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Meal $meal)
-    {
-        //
+    public function test(){
+        return response()->json(['message' => 'Teste de refeicao!'], 200);
     }
 }

@@ -10,9 +10,9 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         $report = new Report();
-        $report->start_date=$request->inicio_data;
-        $report->end_date = $request->fim_data;
-        $report->observation = $request->observacao;
+        $report->inicio_data=$request->inicio_data;
+        $report->fim_data = $request->fim_data;
+        $report->observacao = $request->observacao;
         $report->save();
         return response()->json(['message' => 'Relatório cadastrado com sucesso!'], 201);
     }

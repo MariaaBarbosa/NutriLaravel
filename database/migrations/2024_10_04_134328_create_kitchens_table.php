@@ -12,7 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kitchens', function (Blueprint $table) {
-            $table->id();
+            $table->date('data');
+            $table->integer('cafe_da_manha_feito');
+            $table->integer('cafe_da_manha_desperdicio');
+            $table->integer('almoco_feito');
+            $table->integer('almoco_desperdicio');
+            $table->integer('cafe_da_tarde_feito');
+            $table->integer('cafe_da_tarde_desperdicio');
             $table->timestamps();
         });
     }
