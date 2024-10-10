@@ -9,10 +9,11 @@ class NutritionistController extends Controller
     public function store(Request $request)
     {
         $nutritionist = new Nutritionist();
-        $nutritionist->name=$request->nome;
+        $nutritionist->name=$request->name;
         $nutritionist->email = $request->email;
-        $nutritionist->function = $request->funcao;
-        $nutritionist->password = $request ->senha;
+        $nutritionist->password = $request->password;
+        $nutritionist->function = $request->function;
+        
         $nutritionist->save();
         return response()->json(['message' => 'Nutricionista cadastrado com sucesso!'], 201);
     }
