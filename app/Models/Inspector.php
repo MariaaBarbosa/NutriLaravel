@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Inspector extends Model
 {
-protected $fillable = ['nome', 'email', 'senha', 'funcao'];
+protected $fillable = ['name', 'email', 'password', 'function'];
 }

@@ -10,10 +10,10 @@ class InspectorController extends Controller
       public function store(Request $request)
     {
         $inspector = new Inspector();
-        $inspector->name=$request->nome;
+        $inspector->name=$request->name;
         $inspector->email = $request->email;
-        $inspector->function = $request->funcao;
-        $inspector->password = $request ->senha;
+        $inspector->function = $request->function;
+        $inspector->password = $request ->password;
         $inspector->save();
         return response()->json(['message' => 'Inspetor cadastrado com sucesso!'], 201);
     }
